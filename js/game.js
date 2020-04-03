@@ -291,7 +291,7 @@ function onKeyDown() {
  */
 function initPanorama(imagePath) {
 	// Sphere
-	var geo = new THREE.SphereGeometry(500, 60, 40);
+	var geo = new THREE.SphereGeometry(200, 10, 10);
 	geo.scale(-1, 1, 1);
 
 	// Load texture
@@ -331,7 +331,7 @@ function initModels() {
 	// Shelf
 	var geo = new THREE.BoxBufferGeometry(104, 201, 500);
 	var mat = new THREE.MeshPhongMaterial({
-		color: 0xc1c1c1,
+		color: 0x7e3537,
 		specular: 0x111111,
 		shininess: 10
 	});
@@ -377,7 +377,7 @@ function initModels() {
 	// Pusher
 	var geo = new THREE.BoxBufferGeometry(103, 28, 160);
 	var mat = new THREE.MeshPhongMaterial({
-		color: 0xd8c497,
+		color: 0xc70000,
 		specular: 0x111111,
 		shininess: 10
 	});
@@ -448,7 +448,7 @@ function initAudio() {
 function createCoin(posX = 0, posY = 0, posZ = 0) {
 	loader.load('models/coin.json', function(geometry, materials) {
 		var mass = 1;
-		var friction = 0.4;
+		var friction = 0.5;
 		var restitution = 0.2;
 
 		// Create mesh for model
@@ -497,12 +497,12 @@ function createCoin(posX = 0, posY = 0, posZ = 0) {
  * @returns {void}
  */
 function movePusher() {
-	var delay = 70;
+	var delay = 72;
 	pusherStep += deltaTime * 25;
 
 	// Inwards
 	if (pusherIn) {
-		pusher.setLinearVelocity(new THREE.Vector3(0, 0, -pusherStep * 2));
+		pusher.setLinearVelocity(new THREE.Vector3(0, 0, -pusherStep * 3));
 	}
 
 	// Outwards
