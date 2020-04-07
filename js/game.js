@@ -39,7 +39,7 @@ var coinSFX1,
 window.addEventListener('resize', onWindowResize, false);
 
 // Key press
-document.addEventListener('keydown', onKeyDown, false);
+document.addEventListener('keydown', onKeyEnter, false);
 
 // Start game
 window.onload = init();
@@ -255,7 +255,7 @@ function initScene() {
 	}
 
 	// Delay for sound effects
-	setTimeout(function() {
+	setTimeout(function () {
 		sfxEnabled = true;
 	}, 3000);
 }
@@ -275,8 +275,10 @@ function animate() {
  *
  * @returns {void}
  */
-function onKeyDown() {
+
+function onKeyEnter() {
 	// Hands off the keyboard, Firefox!
+
 	event.preventDefault();
 
 	// Create a coin!
@@ -296,7 +298,7 @@ function initPanorama(imagePath) {
 
 	// Load texture
 	var mat = new THREE.MeshBasicMaterial({
-		map: new THREE.TextureLoader().load(imagePath)
+		map: new THREE.TextureLoader().load(imagePath),
 	});
 
 	// Add to scene
@@ -311,7 +313,7 @@ function initPanorama(imagePath) {
  */
 function initModels() {
 	// Cabinet model
-	loader.load('models/cabinet.json', function(geometry, materials) {
+	loader.load('models/cabinet.json', function (geometry, materials) {
 		// Create mesh for model
 		var material = new THREE.MultiMaterial(materials);
 		cabinet = new THREE.Mesh(geometry, material, 0);
@@ -333,7 +335,7 @@ function initModels() {
 	var mat = new THREE.MeshPhongMaterial({
 		color: 0x7e3537,
 		specular: 0x111111,
-		shininess: 10
+		shininess: 10,
 	});
 	var friction = 1; // high friction
 	var restitution = 0; // low restitution
@@ -349,7 +351,7 @@ function initModels() {
 		color: 0xc1c1c1,
 		wireframe: false,
 		transparent: true,
-		opacity: 0
+		opacity: 0,
 	});
 
 	// Wall left
@@ -379,7 +381,7 @@ function initModels() {
 	var mat = new THREE.MeshPhongMaterial({
 		color: 0xc70000,
 		specular: 0x111111,
-		shininess: 10
+		shininess: 10,
 	});
 	var friction = 1;
 	var restitution = 0;
@@ -415,7 +417,7 @@ function initLights() {
 function initAudio() {
 	// Arcade ambience
 	var arcadeAmb = new THREE.Audio(listener);
-	audioLoader.load('sfx/arcade.mp3', function(buffer) {
+	audioLoader.load('sfx/arcade.mp3', function (buffer) {
 		arcadeAmb.setBuffer(buffer);
 		arcadeAmb.setLoop(true);
 		arcadeAmb.setVolume(0.5);
@@ -425,13 +427,13 @@ function initAudio() {
 	});
 
 	// Coin sounds
-	audioLoader.load('sfx/coinClash1.wav', function(buffer) {
+	audioLoader.load('sfx/coinClash1.wav', function (buffer) {
 		coinSFX.push(buffer);
 	});
-	audioLoader.load('sfx/coinClash2.wav', function(buffer) {
+	audioLoader.load('sfx/coinClash2.wav', function (buffer) {
 		coinSFX.push(buffer);
 	});
-	audioLoader.load('sfx/coinClash3.wav', function(buffer) {
+	audioLoader.load('sfx/coinClash3.wav', function (buffer) {
 		coinSFX.push(buffer);
 	});
 }
@@ -446,7 +448,7 @@ function initAudio() {
  * @returns {void}
  */
 function createCoin(posX = 0, posY = 0, posZ = 0) {
-	loader.load('models/coin.json', function(geometry, materials) {
+	loader.load('models/coin.json', function (geometry, materials) {
 		var mass = 1;
 		var friction = 0.5;
 		var restitution = 0.2;
@@ -472,7 +474,7 @@ function createCoin(posX = 0, posY = 0, posZ = 0) {
 		//coin.setDamping( linear_amount, angular_amount );
 
 		// Collisions
-		coin.addEventListener('collision', function(object, rel_vol) {
+		coin.addEventListener('collision', function (object, rel_vol) {
 			if (sfxEnabled) {
 				var volx = Math.abs(rel_vol.x);
 				var voly = Math.abs(rel_vol.y);
