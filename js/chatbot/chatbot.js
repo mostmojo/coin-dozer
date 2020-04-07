@@ -57,7 +57,7 @@ var Fake = [
 	"Hi there, I'm Matrix82. What's your name?",
 	'Nice to meet you. Would you like to play Coin Pusher?',
 	'Amazing! Are you ready?',
-	"Let's do this! Click the ENTER key, to create coins.",
+	"Let's do this! Click the red X button to close me. Then click the ENTER key, to create coins!",
 	'😎',
 ];
 
