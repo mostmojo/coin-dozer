@@ -101,7 +101,14 @@ Chat Title
 	margin: 0;
 	padding: 0;
 	cursor: pointer;
-	float: right;
+	position: absolute;
+	top: 12px;
+	right: 16px;
+}
+
+.chat-title button:hover {
+	transform: translateY(2px);
+	background: #8c0209;
 }
 
 .chat-title .avatar {
