@@ -46,6 +46,10 @@ body {
 	#coin-slot img {
 		height: 5.5rem;
 	}
+
+	.welcome {
+		width: 19rem;
+	}
 }
 
 #coin-slot img {
