@@ -15,5 +15,7 @@ const welcome = document.querySelector('.welcome');
 okidokes.addEventListener('click', (e) => {
 	// Hide welcome
 	e.preventDefault();
-	welcome.style.display = 'none';
+	setTimeout(function () {
+		welcome.style.display = 'none';
+	}, 1000);
 });

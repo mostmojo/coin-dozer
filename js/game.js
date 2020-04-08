@@ -3,9 +3,9 @@
 'use strict';
 
 /**
- * Coins.js
+ * js-coins.js
  *
- * @author Michael Dearman <http://github.com/mickeyuk>
+ * @author MostMojo <http://github.com/mostmojo>
  */
 
 // three.js
@@ -39,13 +39,7 @@ var coinSFX1,
 window.addEventListener('resize', onWindowResize, false);
 
 // Key press
-document.addEventListener('keydown', function (event) {
-	if (event.keyCode === 13) {
-		event.preventDefault();
-		createCoin(randomRange(-40, 40), randomRange(80, 100), randomRange(-20, -100));
-	}
-}),
-	false;
+document.addEventListener('click', onKeyClick, false);
 
 // Start game
 window.onload = init();
@@ -282,7 +276,7 @@ function animate() {
  * @returns {void}
  */
 
-function onKeyEnter() {
+function onKeyClick() {
 	// Hands off the keyboard, Firefox!
 
 	event.preventDefault();
