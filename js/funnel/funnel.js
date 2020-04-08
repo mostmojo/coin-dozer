@@ -22,6 +22,7 @@ okidokes.addEventListener('click', (e) => {
 	}, 400);
 });
 
+// Function to hide level one module on click
 okidokesTwo.addEventListener('click', (e) => {
 	// Hide level one
 	e.preventDefault();
@@ -35,6 +36,9 @@ var clickCounter = 0;
 window.addEventListener('click', function () {
 	clickCounter++;
 	if (clickCounter == 7) {
+		//Open it
+		levelOne.style.display = 'block';
+	} else if (clickCounter == 14) {
 		//Open it
 		levelOne.style.display = 'block';
 	}
