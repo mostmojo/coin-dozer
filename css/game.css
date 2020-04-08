@@ -84,3 +84,7 @@ body {
 .welcome-button:hover {
 	background: linear-gradient(#89070e, #68080c);
 }
+
+.mb {
+	margin-bottom: 1rem;
+}
