@@ -33,8 +33,19 @@ body {
 
 #coin-slot {
 	position: absolute;
-	top: 10px;
+	top: 70px;
 	right: 10px;
+}
+
+@media only screen and (max-width: 414px) {
+	#coin-slot {
+		top: 20px;
+		left: 10px;
+	}
+
+	#coin-slot img {
+		height: 5.5rem;
+	}
 }
 
 #coin-slot img {
@@ -87,4 +98,42 @@ body {
 
 .mb {
 	margin-bottom: 1rem;
+}
+
+#progressbar {
+	height: 12px;
+	position: absolute;
+	right: 10px;
+	top: 57px;
+	width: 120px;
+	background: rgba(159, 159, 159, 0.9);
+	border-radius: 4px;
+	margin: -20px 0 0 -100px;
+}
+
+#loading {
+	transition: all 500ms ease;
+	height: 6px;
+	width: calc(100% - 10px);
+	border-radius: 4px;
+	background: rgb(147, 8, 14);
+	position: absolute;
+	margin: 3px;
+	display: inline-block;
+	animation: load 240s ease infinite 4s;
+}
+#load {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	text-align: left;
+	margin-top: -20px;
+}
+
+@keyframes load {
+	0% {
+		width: 2%;
+	}
+	10% {
+		width: 10%;
+	}
 }
