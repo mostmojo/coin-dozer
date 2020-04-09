@@ -54,12 +54,21 @@ playGameCTA.addEventListener(
 	false
 );
 
-// Function to hide Level 1 module on click
+// Function to hide Level 1 popup on click
 window.addEventListener('click', (e) => {
 	// Hide Level 1
 	e.preventDefault();
 	setTimeout(function () {
 		levelOne.style.display = 'none';
+	}, 7000);
+});
+
+// Function to hide people playing popup on click
+window.addEventListener('click', (e) => {
+	// Hide Level 1
+	e.preventDefault();
+	setTimeout(function () {
+		peoplePlaying.style.display = 'none';
 	}, 7000);
 });
 
@@ -70,8 +79,11 @@ window.addEventListener('click', function () {
 	if (clickCounter == 7) {
 		// Show Level 1 popup
 		levelOne.style.display = 'block';
-	} else if (clickCounter == 10) {
-		//Open it
-		levelOne.style.display = 'block';
+	} else if (clickCounter == 12) {
+		// Show peoplePlaying popup
+		peoplePlaying.style.display = 'block';
+	} else if (clickCounter == 16) {
+		// Show Level 2 popup
+		levelTwo.style.display = 'block';
 	}
 });

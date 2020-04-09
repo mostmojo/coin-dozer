@@ -37,21 +37,6 @@ body {
 	right: 10px;
 }
 
-@media only screen and (max-width: 414px) {
-	#coin-slot {
-		top: 20px;
-		left: 10px;
-	}
-
-	#coin-slot img {
-		height: 5.5rem;
-	}
-
-	.welcome {
-		width: 19rem;
-	}
-}
-
 #coin-slot img {
 	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
@@ -122,11 +107,11 @@ body {
 	height: 6px;
 	width: calc(100% - 10px);
 	border-radius: 4px;
-	background: rgb(147, 8, 14);
+	background: linear-gradient(to right, #b71921, #f06d06);
 	position: absolute;
 	margin: 3px;
 	display: inline-block;
-	animation: load 240s ease infinite 4s;
+	animation: load 200s ease infinite 4s;
 }
 #load {
 	font-family: 'Open Sans', sans-serif;
@@ -183,5 +168,42 @@ body {
 
 	100% {
 		transform: scale(0.97);
+	}
+}
+
+.people-playing {
+	margin: 1rem;
+	background: linear-gradient(#8f6b29, #fde08d, #df9f28);
+	border: #8f6b29 2px solid;
+	padding: 1px;
+	border-radius: 2px;
+	text-align: center;
+}
+
+.people-playing p {
+	font-family: 'Open Sans', sans-serif;
+	color: black;
+	font-weight: bold;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 414px) {
+	#coin-slot {
+		top: 20px;
+		left: 10px;
+	}
+
+	#coin-slot img {
+		height: 5.5rem;
+	}
+
+	.welcome {
+		width: 19rem;
+	}
+
+	.people-playing {
+		margin: 6rem;
+		padding: 5px 10px;
 	}
 }
