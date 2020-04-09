@@ -52,23 +52,30 @@ window.addEventListener('click', function () {
 		// Show Level 1 popup
 		levelOne.style.display = 'block';
 	} else if (clickCounter == 9) {
+		// Hide Level 1 popup
 		levelOne.style.display = 'none';
 	} else if (clickCounter == 12) {
 		// Show peoplePlaying popup
 		peoplePlaying.style.display = 'block';
 	} else if (clickCounter == 15) {
+		// Hide peoplePlaying popup
 		peoplePlaying.style.display = 'none';
 	} else if (clickCounter == 20) {
 		// Show Level 2 popup
 		levelTwo.style.display = 'block';
 	} else if (clickCounter == 22) {
+		// Hide Level 2 popup
 		levelTwo.style.display = 'none';
 	} else if (clickCounter == 27) {
+		// Show Level 3 popup & loading bar & chat bot
 		levelThree.style.display = 'block';
 		loadingPanel.style.display = 'block';
 		loadingBarMove();
+		showChatBot();
 	}
 });
+
+// Function to trigger the moving of the loaoding bar
 
 function loadingBarMove() {
 	var elem = document.getElementById('myBar');
@@ -76,7 +83,6 @@ function loadingBarMove() {
 	var id = setInterval(frame, 150);
 	function frame() {
 		if (width >= 100) {
-			showChatBot();
 			clearInterval(id);
 		} else {
 			width++;
@@ -86,5 +92,5 @@ function loadingBarMove() {
 }
 
 function showChatBot() {
-	chatBox.style.display = 'block';
+	chatBox.classList.add('position-center');
 }
