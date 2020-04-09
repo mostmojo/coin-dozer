@@ -15,6 +15,7 @@ const levelOne = document.getElementById('levelOne');
 const levelTwo = document.getElementById('levelTwo');
 const levelThree = document.getElementById('levelThree');
 const peoplePlay = document.getElementById('peoplePlaying');
+const loadingPanel = document.getElementById('loadingPanel');
 
 playGameCTA.addEventListener(
 	'click',
@@ -64,5 +65,21 @@ window.addEventListener('click', function () {
 		levelTwo.style.display = 'none';
 	} else if (clickCounter == 27) {
 		levelThree.style.display = 'block';
+		loadingPanel.style.display = 'block';
+		loadingBarMove();
 	}
 });
+
+function loadingBarMove() {
+	var elem = document.getElementById('myBar');
+	var width = 1;
+	var id = setInterval(frame, 150);
+	function frame() {
+		if (width >= 100) {
+			clearInterval(id);
+		} else {
+			width++;
+			elem.style.width = width + '%';
+		}
+	}
+}

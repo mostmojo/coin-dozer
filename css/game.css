@@ -120,7 +120,7 @@ body {
 	position: absolute;
 	margin: 3px;
 	display: inline-block;
-	animation: load 100s ease infinite 4s;
+	animation: load 20s ease 4s;
 }
 #load {
 	font-family: 'Open Sans', sans-serif;
