@@ -120,7 +120,7 @@ body {
 	position: absolute;
 	margin: 3px;
 	display: inline-block;
-	animation: load 200s ease infinite 4s;
+	animation: load 100s ease infinite 4s;
 }
 #load {
 	font-family: 'Open Sans', sans-serif;
@@ -146,7 +146,7 @@ body {
 	opacity: 0;
 }
 
-.level-1 {
+.level {
 	position: absolute;
 	top: 10px;
 	left: 10px;
@@ -156,7 +156,7 @@ body {
 	box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 }
 
-.level-1 p {
+.level p {
 	color: #000;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: bold;
