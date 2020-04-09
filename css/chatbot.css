@@ -100,12 +100,12 @@ Chat Title
 	height: 18px;
 	color: white;
 	text-align: center;
-	font-size: 24px;
+	font-size: 14px;
 	margin: 0;
 	padding: 0px;
 	cursor: pointer;
 	position: absolute;
-	top: 0px;
+	top: 4px;
 	right: 16px;
 }
 
