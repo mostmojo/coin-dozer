@@ -181,12 +181,14 @@ body {
 }
 
 .people-playing {
-	margin: 1rem;
 	background: linear-gradient(#8f6b29, #fde08d, #df9f28);
 	border: #8f6b29 2px solid;
 	padding: 1px;
 	border-radius: 2px;
 	text-align: center;
+	width: 15rem;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+	margin: 1rem auto;
 }
 
 .people-playing p {
