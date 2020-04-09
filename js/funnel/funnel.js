@@ -76,10 +76,15 @@ function loadingBarMove() {
 	var id = setInterval(frame, 150);
 	function frame() {
 		if (width >= 100) {
+			showChatBot();
 			clearInterval(id);
 		} else {
 			width++;
 			elem.style.width = width + '%';
 		}
 	}
+}
+
+function showChatBot() {
+	chatBox.style.display = 'block';
 }
