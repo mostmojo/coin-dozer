@@ -96,7 +96,6 @@ Chat Title
 
 .chat-title button {
 	font-family: 'Open Sans', sans-serif;
-
 	width: 18px;
 	height: 18px;
 	color: white;
@@ -112,7 +111,6 @@ Chat Title
 
 .chat-title button:hover {
 	transform: translateY(2px);
-	background: #8c0209;
 }
 
 .chat-title .avatar {
