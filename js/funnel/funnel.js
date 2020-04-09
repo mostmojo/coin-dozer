@@ -57,7 +57,6 @@ playGameCTA.addEventListener(
 // Function to hide Level 1 popup on click
 window.addEventListener('click', (e) => {
 	// Hide Level 1
-	e.preventDefault();
 	setTimeout(function () {
 		levelOne.style.display = 'none';
 	}, 7000);
@@ -66,9 +65,16 @@ window.addEventListener('click', (e) => {
 // Function to hide people playing popup on click
 window.addEventListener('click', (e) => {
 	// Hide Level 1
-	e.preventDefault();
 	setTimeout(function () {
 		peoplePlaying.style.display = 'none';
+	}, 8000);
+});
+
+// Function to hide Level 2 popup on click
+window.addEventListener('click', (e) => {
+	// Hide Level 2
+	setTimeout(function () {
+		levelTwo.style.display = 'none';
 	}, 7000);
 });
 
