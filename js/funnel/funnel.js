@@ -83,6 +83,7 @@ function loadingBarMove() {
 	var id = setInterval(frame, 150);
 	function frame() {
 		if (width >= 100) {
+			showCongratsClaimPrize();
 			clearInterval(id);
 		} else {
 			width++;
@@ -91,6 +92,16 @@ function loadingBarMove() {
 	}
 }
 
+// Function to show the chat bot
+
 function showChatBot() {
 	chatBox.classList.add('position-center');
+}
+
+// function to show the final claim prize popup
+function showCongratsClaimPrize() {
+	levelThree.style.display = 'none';
+	loadingPanel.style.display = 'none';
+	chatBox.classList.remove('position-center');
+	levelOne.style.display = 'block';
 }

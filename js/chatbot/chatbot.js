@@ -54,11 +54,13 @@ $(window).on('keydown', function (e) {
 });
 
 var Fake = [
-	"Hi there, I'm Matrix82. What's your name?",
-	'Nice to meet you. Would you like to play Coin Pusher?',
-	'Amazing! Are you ready?',
-	"Let's do this! Click the red X button to close me. Then click the ENTER key, to create coins!",
+	'Hi! We are counting the coins. Do you think you will take home the grand prize?',
+	'Exciting! Looks like it’s your lucky day. What is your favourite casino game?',
+	'Good choice! What would you buy if you won the Jackpot?',
 	'😎',
+	'😎',
+	'😎',
+	'Are you having a seizure? Shall I call 911?',
 ];
 
 function fakeMessage() {
