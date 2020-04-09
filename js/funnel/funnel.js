@@ -14,6 +14,7 @@ const playGameCTA = document.getElementById('playGameCTA');
 const okidokesTwo = document.getElementById('okidokesTwo');
 const welcome = document.querySelector('.welcome');
 const levelOne = document.getElementById('levelOne');
+const peoplePlay = document.getElementById('peoplePlaying');
 
 /* Old code that hides WELCOME module, but without smooth transition.
 
@@ -62,14 +63,14 @@ window.addEventListener('click', (e) => {
 	}, 7000);
 });
 
-// Function to detect number of clicks and display the LEVEL 1,2,3 modules accordingly
+// Function to detect number of clicks and show the LEVEL 1,2,3 popups accordingly (and people-playing popup)
 var clickCounter = 0;
 window.addEventListener('click', function () {
 	clickCounter++;
 	if (clickCounter == 7) {
-		//Open it
+		// Show Level 1 popup
 		levelOne.style.display = 'block';
-	} else if (clickCounter == 14) {
+	} else if (clickCounter == 10) {
 		//Open it
 		levelOne.style.display = 'block';
 	}

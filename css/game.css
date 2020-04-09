@@ -155,7 +155,7 @@ body {
 .level-1 {
 	position: absolute;
 	top: 10px;
-	left: 20px;
+	left: 10px;
 	padding: 0.5rem 1rem;
 	background-color: white;
 	transition: all 1s linear;
@@ -166,4 +166,22 @@ body {
 	color: #000;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: bold;
+}
+
+.pulse {
+	animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.97);
+	}
+
+	70% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(0.97);
+	}
 }
