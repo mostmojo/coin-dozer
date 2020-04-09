@@ -417,7 +417,7 @@ function initLights() {
 function initAudio() {
 	// Arcade ambience
 	var arcadeAmb = new THREE.Audio(listener);
-	audioLoader.load('sfx/arcade.mp', function (buffer) {
+	audioLoader.load('sfx/arcade.mp3', function (buffer) {
 		arcadeAmb.setBuffer(buffer);
 		arcadeAmb.setLoop(true);
 		arcadeAmb.setVolume(0.5);
@@ -427,13 +427,13 @@ function initAudio() {
 	});
 
 	// Coin sounds
-	audioLoader.load('sfx/coinClash1.wa', function (buffer) {
+	audioLoader.load('sfx/coinClash1.wav', function (buffer) {
 		coinSFX.push(buffer);
 	});
-	audioLoader.load('sfx/coinClash2.wa', function (buffer) {
+	audioLoader.load('sfx/coinClash2.wav', function (buffer) {
 		coinSFX.push(buffer);
 	});
-	audioLoader.load('sfx/coinClash3.wa', function (buffer) {
+	audioLoader.load('sfx/coinClash3.wav', function (buffer) {
 		coinSFX.push(buffer);
 	});
 }
