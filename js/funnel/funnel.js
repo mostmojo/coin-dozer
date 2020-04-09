@@ -9,10 +9,13 @@ xBtn.addEventListener('click', (e) => {
 });
 
 // Function to hide WELCOME module on click
-const okidokes = document.getElementById('okidokes');
+let welcomeBanner = document.getElementById('welcomeBanner');
+const playGameCTA = document.getElementById('playGameCTA');
 const okidokesTwo = document.getElementById('okidokesTwo');
 const welcome = document.querySelector('.welcome');
 const levelOne = document.getElementById('levelOne');
+
+/* Old code that hides WELCOME module, but without smooth transition.
 
 okidokes.addEventListener('click', (e) => {
 	// Hide welcome
@@ -22,16 +25,44 @@ okidokes.addEventListener('click', (e) => {
 	}, 400);
 });
 
-// Function to hide level one module on click
-okidokesTwo.addEventListener('click', (e) => {
-	// Hide level one
+*/
+
+playGameCTA.addEventListener(
+	'click',
+	function () {
+		if (welcomeBanner.classList.contains('hidden')) {
+			welcomeBanner.classList.remove('hidden');
+			setTimeout(function () {
+				welcomeBanner.classList.remove('visuallyhidden');
+			}, 20);
+		} else {
+			welcomeBanner.classList.add('visuallyhidden');
+			welcomeBanner.addEventListener(
+				'transitionend',
+				function (e) {
+					welcomeBanner.classList.add('hidden');
+				},
+				{
+					capture: false,
+					once: true,
+					passive: false,
+				}
+			);
+		}
+	},
+	false
+);
+
+// Function to hide Level 1 module on click
+window.addEventListener('click', (e) => {
+	// Hide Level 1
 	e.preventDefault();
 	setTimeout(function () {
 		levelOne.style.display = 'none';
-	}, 400);
+	}, 7000);
 });
 
-// Function to detect number of clicks
+// Function to detect number of clicks and display the LEVEL 1,2,3 modules accordingly
 var clickCounter = 0;
 window.addEventListener('click', function () {
 	clickCounter++;
@@ -43,49 +74,3 @@ window.addEventListener('click', function () {
 		levelOne.style.display = 'block';
 	}
 });
-
-/*
-
-.box {
-  background: goldenrod;
-  width: 300px;
-  height: 300px;
-  margin: 30px auto;
-  transition: all 1s linear;
-  display: block;
-}
-
-.hidden {
-  display: none;
-}
-
-.visuallyhidden {
-  opacity: 0;
-}
-
-
-let box = document.getElementById('box'),
-    btn = document.querySelector('button');
-
-btn.addEventListener('click', function () {
-
-  if (box.classList.contains('hidden')) {
-    box.classList.remove('hidden');
-    setTimeout(function () {
-      box.classList.remove('visuallyhidden');
-    }, 20);
-  } else {
-    box.classList.add('visuallyhidden');
-    box.addEventListener('transitionend', function(e) {
-      box.classList.add('hidden');
-    }, {
-      capture: false,
-      once: true,
-      passive: false
-    });
-  }
-
-}, false);
-
-
-*/

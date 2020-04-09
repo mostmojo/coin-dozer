@@ -68,6 +68,8 @@ body {
 	padding: 2rem 1.2rem;
 	height: auto;
 	width: 20rem;
+	display: block;
+	transition: all 1s linear;
 }
 
 .welcome-title,
@@ -140,4 +142,28 @@ body {
 	10% {
 		width: 10%;
 	}
+}
+
+.hidden {
+	display: none;
+}
+
+.visuallyhidden {
+	opacity: 0;
+}
+
+.level-1 {
+	position: absolute;
+	top: 10px;
+	left: 20px;
+	padding: 0.5rem 1rem;
+	background-color: white;
+	transition: all 1s linear;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+.level-1 p {
+	color: #000;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
 }
