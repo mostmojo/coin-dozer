@@ -103,5 +103,8 @@ function showCongratsClaimPrize() {
 	levelThree.style.display = 'none';
 	loadingPanel.style.display = 'none';
 	chatBox.classList.remove('position-center');
+	/* Add this tomorrow:
+	Congratulations!
+	You won 100 free chances to hit the Jackpot + $475 welcome bonus. */
 	levelOne.style.display = 'block';
 }
