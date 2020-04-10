@@ -47,19 +47,19 @@ window.addEventListener('click', function () {
 	if (clickCounter == 33) {
 		// Show Level 1 popup
 		levelOne.style.display = 'block';
-	} else if (clickCounter == 35) {
+	} else if (clickCounter == 41) {
 		// Hide Level 1 popup
 		levelOne.style.display = 'none';
 	} else if (clickCounter == 12) {
 		// Show peoplePlaying popup
 		peoplePlaying.style.display = 'block';
-	} else if (clickCounter == 17) {
+	} else if (clickCounter == 20) {
 		// Hide peoplePlaying popup
 		peoplePlaying.style.display = 'none';
 	} else if (clickCounter == 66) {
 		// Show Level 2 popup
 		levelTwo.style.display = 'block';
-	} else if (clickCounter == 69) {
+	} else if (clickCounter == 74) {
 		// Hide Level 2 popup
 		levelTwo.style.display = 'none';
 	} else if (clickCounter == 100) {
