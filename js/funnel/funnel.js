@@ -102,3 +102,12 @@ function showCongratsClaimPrize() {
 	chatBox.classList.remove('position-center');
 	congratsClaimPrize.style.display = 'block';
 }
+
+/* Function to open designated link in a new tab.
+This is due to the game overlaying the <a href="#.."> links making them not work. There's always a way ;) */
+
+function openLinkInNewTab() {
+	window.open('https://www.google.com', '_blank');
+}
+
+claimPrizeCTA.addEventListener('click', openLinkInNewTab);
