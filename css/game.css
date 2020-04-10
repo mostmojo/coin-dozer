@@ -115,33 +115,35 @@ a:hover {
 	margin-bottom: 1rem;
 }
 
-#progressbar {
+.jumbotron {
 	height: 12px;
 	position: absolute;
 	right: 10px;
-	top: 57px;
+	top: 38px;
 	width: 120px;
-	background: rgba(159, 159, 159, 0.9);
 	border-radius: 4px;
 	margin: -20px 0 0 -100px;
 }
 
-#loading {
-	transition: all 500ms ease;
-	height: 6px;
-	width: calc(100% - 10px);
-	border-radius: 4px;
-	background: linear-gradient(to right, #b71921, #f06d06);
-	position: absolute;
-	margin: 3px;
-	display: inline-block;
-	animation: load 20s ease 4s;
+.progress {
+	display: flex;
+	height: 1rem;
+	overflow: hidden;
+	font-size: 0.75rem;
+	background-color: #e9ecef;
+	border-radius: 0.25rem;
 }
-#load {
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 600;
-	text-align: left;
-	margin-top: -20px;
+
+.progress-bar {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	overflow: hidden;
+	color: #fff;
+	text-align: center;
+	white-space: nowrap;
+	background: linear-gradient(to right, #b71921, #f06d06);
+	transition: width 0.6s ease;
 }
 
 @keyframes load {

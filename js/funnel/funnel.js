@@ -44,10 +44,10 @@ playGameCTA.addEventListener(
 var clickCounter = 0;
 window.addEventListener('click', function () {
 	clickCounter++;
-	if (clickCounter == 7) {
+	if (clickCounter == 33) {
 		// Show Level 1 popup
 		levelOne.style.display = 'block';
-	} else if (clickCounter == 9) {
+	} else if (clickCounter == 35) {
 		// Hide Level 1 popup
 		levelOne.style.display = 'none';
 	} else if (clickCounter == 12) {
@@ -56,13 +56,13 @@ window.addEventListener('click', function () {
 	} else if (clickCounter == 15) {
 		// Hide peoplePlaying popup
 		peoplePlaying.style.display = 'none';
-	} else if (clickCounter == 20) {
+	} else if (clickCounter == 66) {
 		// Show Level 2 popup
 		levelTwo.style.display = 'block';
-	} else if (clickCounter == 22) {
+	} else if (clickCounter == 69) {
 		// Hide Level 2 popup
 		levelTwo.style.display = 'none';
-	} else if (clickCounter == 27) {
+	} else if (clickCounter == 100) {
 		// Show Level 3 popup & loading bar & chat bot
 		levelThree.style.display = 'block';
 		loadingPanel.style.display = 'block';
@@ -135,3 +135,17 @@ function timerStart() {
 		display = document.querySelector('#countdown');
 	timerBoot(twoMins, display);
 }
+
+// Function to show the progress bar
+
+$percent = 0;
+
+$(document.documentElement).click(function () {
+	if ($percent < 100) {
+		$percent += 1;
+	} else if ($percent == 100) {
+		('');
+	}
+	$('.progress-bar').width($percent + '%');
+	$('.progress-bar').html($percent + '%');
+});
