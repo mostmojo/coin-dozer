@@ -64,6 +64,7 @@ body {
 	width: 20rem;
 	display: block;
 	transition: all 1s linear;
+	z-index: 600;
 }
 
 .welcome-title,
@@ -96,6 +97,14 @@ body {
 #claimPrizeCTA {
 	cursor: pointer;
 	text-decoration: none;
+}
+
+a {
+	cursor: pointer;
+}
+
+a:hover {
+	cursor: pointer;
 }
 
 .welcome-button:hover {
@@ -219,6 +228,23 @@ body {
 	width: 1%;
 	height: 20px;
 	background: linear-gradient(to right, #b71921, #f06d06);
+}
+
+.prize-banner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #fff;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+	border-radius: 4px;
+	text-align: center;
+	padding: 2rem 1.2rem;
+	height: auto;
+	width: 20rem;
+	display: block;
+	transition: all 1s linear;
+	z-index: 700;
 }
 
 /* Media Queries */

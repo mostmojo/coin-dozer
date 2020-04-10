@@ -9,6 +9,7 @@ const levelTwo = document.getElementById('levelTwo');
 const levelThree = document.getElementById('levelThree');
 const peoplePlay = document.getElementById('peoplePlaying');
 const loadingPanel = document.getElementById('loadingPanel');
+const congratsClaimPrize = document.getElementById('congratsClaimPrize');
 
 // Function to hide WELCOME module on click with transition effect
 
@@ -99,7 +100,5 @@ function showCongratsClaimPrize() {
 	levelThree.style.display = 'none';
 	loadingPanel.style.display = 'none';
 	chatBox.classList.remove('position-center');
-	/* Add this tomorrow:
-	Congratulations!*/
-	levelOne.style.display = 'block';
+	congratsClaimPrize.style.display = 'block';
 }
