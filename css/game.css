@@ -119,10 +119,14 @@ a:hover {
 	height: 12px;
 	position: absolute;
 	right: 10px;
-	top: 38px;
+	top: 36px;
 	width: 120px;
 	border-radius: 4px;
 	margin: -20px 0 0 -100px;
+}
+
+.jumbotron p {
+	margin: 4px 0;
 }
 
 .progress {
