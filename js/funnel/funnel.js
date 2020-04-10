@@ -100,6 +100,7 @@ function showCongratsClaimPrize() {
 	levelThree.style.display = 'none';
 	loadingPanel.style.display = 'none';
 	chatBox.classList.remove('position-center');
+	timerStart();
 	congratsClaimPrize.style.display = 'block';
 }
 
@@ -129,8 +130,8 @@ function timerBoot(duration, display) {
 		}
 	}, 1000);
 }
-window.onload = function () {
-	var twoMins = 60 * 2.7,
+function timerStart() {
+	var twoMins = 60 * 2,
 		display = document.querySelector('#countdown');
 	timerBoot(twoMins, display);
-};
+}
