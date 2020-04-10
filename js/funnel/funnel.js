@@ -53,7 +53,7 @@ window.addEventListener('click', function () {
 	} else if (clickCounter == 12) {
 		// Show peoplePlaying popup
 		peoplePlaying.style.display = 'block';
-	} else if (clickCounter == 15) {
+	} else if (clickCounter == 17) {
 		// Hide peoplePlaying popup
 		peoplePlaying.style.display = 'none';
 	} else if (clickCounter == 66) {
