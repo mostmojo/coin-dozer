@@ -90,6 +90,12 @@ body {
 	transition: background 0.3s ease;
 	border: 1px solid #72080d;
 	font-family: 'Open Sans', sans-serif;
+	cursor: pointer;
+}
+
+#claimPrizeCTA {
+	cursor: pointer;
+	text-decoration: none;
 }
 
 .welcome-button:hover {

@@ -3,6 +3,7 @@
 const chatBox = document.getElementById('chatBox');
 let welcomeBanner = document.getElementById('welcomeBanner');
 const playGameCTA = document.getElementById('playGameCTA');
+const claimPrizeCTA = document.getElementById('claimPrizeCTA');
 const levelOne = document.getElementById('levelOne');
 const levelTwo = document.getElementById('levelTwo');
 const levelThree = document.getElementById('levelThree');
@@ -99,7 +100,6 @@ function showCongratsClaimPrize() {
 	loadingPanel.style.display = 'none';
 	chatBox.classList.remove('position-center');
 	/* Add this tomorrow:
-	Congratulations!
-	You won 100 free chances to hit the Jackpot + $475 welcome bonus. */
+	Congratulations!*/
 	levelOne.style.display = 'block';
 }
