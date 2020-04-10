@@ -290,4 +290,9 @@ a:hover {
 		margin: 6rem;
 		padding: 5px 10px;
 	}
+
+	.jumbotron {
+		top: 27px;
+		width: 77px;
+	}
 }
