@@ -1,14 +1,6 @@
-// Function to hide CHATBOT on click of X button
-const xBtn = document.getElementById('xBtn');
+// Variables
+
 const chatBox = document.getElementById('chatBox');
-
-xBtn.addEventListener('click', (e) => {
-	// Hide chatbox
-	e.preventDefault();
-	chatBox.style.display = 'none';
-});
-
-// Function to hide WELCOME module on click
 let welcomeBanner = document.getElementById('welcomeBanner');
 const playGameCTA = document.getElementById('playGameCTA');
 const levelOne = document.getElementById('levelOne');
@@ -16,6 +8,8 @@ const levelTwo = document.getElementById('levelTwo');
 const levelThree = document.getElementById('levelThree');
 const peoplePlay = document.getElementById('peoplePlaying');
 const loadingPanel = document.getElementById('loadingPanel');
+
+// Function to hide WELCOME module on click with transition effect
 
 playGameCTA.addEventListener(
 	'click',
@@ -75,7 +69,7 @@ window.addEventListener('click', function () {
 	}
 });
 
-// Function to trigger the moving of the loaoding bar
+// Function to trigger the moving of the loading bar
 
 function loadingBarMove() {
 	var elem = document.getElementById('myBar');
@@ -98,7 +92,8 @@ function showChatBot() {
 	chatBox.classList.add('position-center');
 }
 
-// function to show the final claim prize popup
+// Function to show the final claim prize popup
+
 function showCongratsClaimPrize() {
 	levelThree.style.display = 'none';
 	loadingPanel.style.display = 'none';
