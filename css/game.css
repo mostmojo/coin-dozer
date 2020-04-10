@@ -247,6 +247,23 @@ a:hover {
 	z-index: 700;
 }
 
+#countdown {
+	font-size: 1rem;
+	color: #93080e;
+	border-radius: 4px;
+	width: 64%;
+	height: 10%;
+	text-align: center;
+	margin: 8px auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	transition: background 0.3s ease;
+	border: 1px solid #72080d;
+	padding: 0.2rem 4rem;
+}
+
 /* Media Queries */
 
 @media only screen and (max-width: 414px) {

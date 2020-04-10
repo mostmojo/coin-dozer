@@ -111,3 +111,26 @@ function openLinkInNewTab() {
 }
 
 claimPrizeCTA.addEventListener('click', openLinkInNewTab);
+
+// Timer to boot the 2 minute countdown
+
+function timerBoot(duration, display) {
+	var countdown = duration,
+		mins,
+		secs;
+	setInterval(function () {
+		mins = parseInt(countdown / 60, 10);
+		secs = parseInt(countdown % 60, 10);
+		mins = mins < 10 ? '0' + mins : mins;
+		secs = secs < 10 ? '0' + secs : secs;
+		display.textContent = mins + ':' + secs;
+		if (--countdown < 0) {
+			countdown = duration;
+		}
+	}, 1000);
+}
+window.onload = function () {
+	var twoMins = 60 * 2.7,
+		display = document.querySelector('#countdown');
+	timerBoot(twoMins, display);
+};
