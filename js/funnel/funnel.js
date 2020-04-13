@@ -65,6 +65,7 @@ window.addEventListener('click', function () {
 	} else if (clickCounter == 100) {
 		// Show Level 3 popup & loading bar & chat bot
 		levelThree.style.display = 'block';
+		levelThree.classList.add('confetti');
 		loadingPanel.style.display = 'block';
 		loadingBarMove();
 		showChatBot();

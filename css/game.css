@@ -270,6 +270,12 @@ a:hover {
 	padding: 0.2rem 4rem;
 }
 
+.confetti {
+	background-image: url('../textures/confetti.gif');
+	background-repeat': 'repeat';
+	background-color': '#000';
+}
+
 /* Media Queries */
 
 @media only screen and (max-width: 414px) {
