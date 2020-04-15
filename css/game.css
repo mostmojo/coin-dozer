@@ -276,6 +276,16 @@ a:hover {
 	background-color': '#000';
 }
 
+#allthis {
+	text-align: center;
+	width: 100%;
+	max-width: 450px;
+	margin-left: auto;
+	margin-right: auto;
+	pointer-events: none;
+	filter: blur(5px);
+}
+
 /* Media Queries */
 
 @media only screen and (max-width: 414px) {

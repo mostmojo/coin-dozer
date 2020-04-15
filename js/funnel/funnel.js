@@ -68,7 +68,7 @@ window.addEventListener('click', function () {
 		levelThree.classList.add('confetti');
 		loadingPanel.style.display = 'block';
 		loadingBarMove();
-		showChatBot();
+		// showChatBot();
 	}
 });
 
@@ -77,7 +77,7 @@ window.addEventListener('click', function () {
 function loadingBarMove() {
 	var elem = document.getElementById('myBar');
 	var width = 1;
-	var id = setInterval(frame, 180);
+	var id = setInterval(frame, 100);
 	function frame() {
 		if (width >= 100) {
 			showCongratsClaimPrize();
@@ -91,18 +91,18 @@ function loadingBarMove() {
 
 // Function to show the chat bot
 
-function showChatBot() {
-	chatBox.classList.add('position-center');
-}
+// function showChatBot() {
+// 	chatBox.classList.add('position-center');
+// }
 
 // Function to show the final claim prize popup
 
 function showCongratsClaimPrize() {
 	levelThree.style.display = 'none';
 	loadingPanel.style.display = 'none';
-	chatBox.classList.remove('position-center');
-	timerStart();
 	congratsClaimPrize.style.display = 'block';
+	timerStart();
+	// chatBox.classList.remove('position-center');
 }
 
 /* Function to open designated link in a new tab.
