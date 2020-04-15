@@ -5143,7 +5143,7 @@
 			"shading": "phong",
 			"opacity": 1,
 			"blending": "NormalBlending",
-			"colorDiffuse": [0.8, 0.578448, 0.231932],
+			"colorDiffuse": [1, 0.9, 0.231932],
 			"DbgColor": 15658734,
 			"transparent": false,
 			"visible": true,
