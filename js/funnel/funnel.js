@@ -10,8 +10,9 @@ const levelThree = document.getElementById('levelThree');
 const peoplePlay = document.getElementById('peoplePlaying');
 const loadingPanel = document.getElementById('loadingPanel');
 const congratsClaimPrize = document.getElementById('congratsClaimPrize');
+const blurry = document.querySelector('.blurry');
 
-// Function to hide WELCOME module on click with transition effect
+// Function to hide WELCOME module and remove blur, on click with transition effect
 
 playGameCTA.addEventListener(
 	'click',
@@ -27,6 +28,7 @@ playGameCTA.addEventListener(
 				'transitionend',
 				function (e) {
 					welcomeBanner.classList.add('hidden');
+					blurry.classList.remove('blurry');
 				},
 				{
 					capture: false,

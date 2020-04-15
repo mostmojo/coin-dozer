@@ -276,14 +276,11 @@ a:hover {
 	background-color': '#000';
 }
 
-#allthis {
-	text-align: center;
+.blurry {
 	width: 100%;
-	max-width: 450px;
-	margin-left: auto;
-	margin-right: auto;
 	pointer-events: none;
-	filter: blur(5px);
+	filter: blur(16px);
+	transition: filter 1s ease;
 }
 
 /* Media Queries */
