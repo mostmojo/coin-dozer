@@ -11,9 +11,10 @@ const peoplePlay = document.getElementById('peoplePlaying');
 const loadingPanel = document.getElementById('loadingPanel');
 const congratsClaimPrize = document.getElementById('congratsClaimPrize');
 const blurry = document.querySelector('.blurry');
+const close = document.getElementById('notification-close');
+const notifs = document.querySelector('.notification');
 
 // Function to hide WELCOME module and remove blur, on click with transition effect
-
 playGameCTA.addEventListener(
 	'click',
 	function () {
@@ -29,6 +30,9 @@ playGameCTA.addEventListener(
 				function (e) {
 					welcomeBanner.classList.add('hidden');
 					blurry.classList.remove('blurry');
+					setTimeout(function () {
+						notifs.classList.remove('visuallyhidden');
+					}, 2000);
 				},
 				{
 					capture: false,
@@ -42,7 +46,6 @@ playGameCTA.addEventListener(
 );
 
 // Function to detect number of clicks and show/hide the LEVEL 1,2,3 & people-playing popups accordingly
-
 var clickCounter = 0;
 window.addEventListener('click', function () {
 	clickCounter++;
@@ -75,7 +78,6 @@ window.addEventListener('click', function () {
 });
 
 // Function to trigger the moving of the loading bar
-
 function loadingBarMove() {
 	var elem = document.getElementById('myBar');
 	var width = 1;
@@ -91,14 +93,13 @@ function loadingBarMove() {
 	}
 }
 
-// Function to show the chat bot
-
-// function showChatBot() {
-// 	chatBox.classList.add('position-center');
-// }
+/* Function to show the chat bot
+	function showChatBot() {
+		chatBox.classList.add('position-center');
+	}
+*/
 
 // Function to show the final claim prize popup
-
 function showCongratsClaimPrize() {
 	levelThree.style.display = 'none';
 	loadingPanel.style.display = 'none';
@@ -109,7 +110,6 @@ function showCongratsClaimPrize() {
 
 /* Function to open designated link in a new tab.
 This is due to the game overlaying the <a href="#.."> links making them not work. There's always a way ;) */
-
 function openLinkInNewTab() {
 	window.open('https://www.google.com', '_blank');
 }
@@ -117,7 +117,6 @@ function openLinkInNewTab() {
 claimPrizeCTA.addEventListener('click', openLinkInNewTab);
 
 // Timer to boot the 2 minute countdown
-
 function timerBoot(duration, display) {
 	var countdown = duration,
 		mins,
@@ -140,7 +139,6 @@ function timerStart() {
 }
 
 // Function to show the progress bar
-
 $percent = 0;
 
 $(document.documentElement).click(function () {
@@ -151,4 +149,10 @@ $(document.documentElement).click(function () {
 	}
 	$('.progress-bar').width($percent + '%');
 	$('.progress-bar').html($percent + '%');
+});
+
+// Function to hide notification on click
+close.addEventListener('click', function () {
+	notifs.classList.add('visuallyhidden');
+	notifs.style.display = 'none';
 });

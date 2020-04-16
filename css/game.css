@@ -184,20 +184,20 @@ a:hover {
 }
 
 .pulse {
-	animation: pulse 2s infinite;
+	animation: pulse 1.5s infinite ease-in;
 }
 
 @keyframes pulse {
 	0% {
-		transform: scale(0.97);
+		transform: translateY(-2px);
 	}
 
-	70% {
-		transform: scale(1);
+	50% {
+		transform: translateY(-4px);
 	}
 
 	100% {
-		transform: scale(0.97);
+		transform: translateY(0);
 	}
 }
 
@@ -284,18 +284,19 @@ a:hover {
 }
 
 .avatar {
-	width: 40px;
+	width: 2.5rem;
 	border-radius: 50%;
 }
 
 .notification {
 	display: flex;
 	align-items: center;
-	margin-bottom: 8px;
 	background: white;
-	padding: 8px 16px;
-	border: 1px solid rgb(211, 211, 211);
-	width: 670px;
+	padding: 8px 12px;
+	border: 1px solid rgb(166, 166, 166);
+	width: auto;
+	position: absolute;
+	bottom: 0;
 }
 
 .notification .notification-content {
@@ -310,13 +311,12 @@ a:hover {
 }
 
 .notification small {
-	color: #797979;
+	color: #525252;
 	font-weight: bold;
 	font-size: 14px;
 }
 .notification .notification-actions {
 	opacity: 0.5;
-	display: flex;
 	transition: ease 0.3s;
 }
 
@@ -327,7 +327,7 @@ a:hover {
 .notification .notification-actions a {
 	color: #999999;
 	margin-left: 16px;
-	font-size: 14px;
+	font-size: 16px;
 }
 
 .notification .notification-actions a:hover {

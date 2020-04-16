@@ -82,27 +82,47 @@
 				<img src="textures/coin_slot.png" />
 			</div>
 
-			<div class="notification">
-				<img src='https://kitt.lewagon.com/placeholder/users/arthur-littm' class="avatar" />
+			<!-- Notification card -->
+			<div class="notification pulse visuallyhidden">
+				<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/156381/profile/profile-80.jpg" class="avatar" />
 				<div class="notification-content">
-					<p><small>
-						<script type="text/javascript">
-							const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-							let dateObj = new Date();
-							let month = monthNames[dateObj.getMonth()];
-							let day = String(dateObj.getDate()).padStart(2, '0');
-							let year = dateObj.getFullYear();
-							let output = month  + '\n'+ day  + ', ' + year;
-							document.write(output);
-						</script>
-					</small></p>
-					<p style="">Tap anywhere to generate coins. Reach <strong>100% progress</strong> to win your $475 welcome bonus.</p>
+					<p>
+						<small>
+							<script type="text/javascript">
+								const monthNames = [
+									'January',
+									'February',
+									'March',
+									'April',
+									'May',
+									'June',
+									'July',
+									'August',
+									'September',
+									'October',
+									'November',
+									'December',
+								];
+								let dateObj = new Date();
+								let month = monthNames[dateObj.getMonth()];
+								let day = String(dateObj.getDate()).padStart(2, '0');
+								let year = dateObj.getFullYear();
+								let output = month + '\n' + day + ', ' + year;
+								document.write(output);
+							</script>
+						</small>
+					</p>
+					<p style="">
+						Hey! Remember: Tap anywhere to generate coins. Reach
+						<strong>100% progress</strong>
+						to win your
+						<strong>$475 bonus.</strong>
+					</p>
 				</div>
 
 				<div class="notification-actions">
-					<a href="#"><i class="far fa-times-circle"></i></a>
+					<a id="notification-close" href="#"><i class="far fa-times-circle"></i></a>
 				</div>
-			</div>
 			</div>
 
 			<!-- Money badge -->
