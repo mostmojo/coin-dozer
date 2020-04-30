@@ -76,10 +76,8 @@
       <!-- Progress  bar -->
       <div class="jumbotron-container">
         <div class="jumbotron">
+          <img class="jumbotron-img" src="textures/star.png" />
           <p>TOP LEVEL</p>
-          <div class="star">
-            <img src="textures/star.png" />
-          </div>
           <div class="progress">
             <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
@@ -148,8 +146,8 @@
 
       <!-- Level 3 popup-->
       <div id="levelThree" class="level pulse" style="display: none;">
-        <p>Level 3. Congrats! Top level! 🎉</p>
-        <p>Calculating your prize...</p>
+        <p class="level-p">CONGRATS! TOP LEVEL SCORED!</p>
+        <p class="level-prize">LOADING YOUR PRIZE...</p>
         <!-- Loading bar -->
         <div id="loadingPanel2" style="display: none;">
           <div id="myProgress2">
@@ -160,7 +158,7 @@
 
       <!-- People playing popup-->
       <div id="peoplePlaying" class="people-playing pulse" style="display: none;">
-        <p>967 people playing right now!</p>
+        <p>27 people playing right now!</p>
       </div>
 
       <!-- Nearly there -->
@@ -172,7 +170,10 @@
       <section id="congratsClaimPrize" class="prize-banner" style="display: none;">
         <h2 class="welcome-title">CONGRATULATIONS! 🎉</h2>
         <p class="welcome-subtitle mb">
-          You won 100 free chances to hit the Jackpot + $475 welcome bonus.
+          You won
+          <strong style="color: #faff00;">100 free chances</strong>
+          to hit the Jackpot
+          <strong style="color: #faff00;">+ $475 welcome bonus.</strong>
           <br />
           <br />
           You have 2 minutes to claim your prize.

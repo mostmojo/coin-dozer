@@ -333,7 +333,7 @@ function initModels() {
   // Shelf
   var geo = new THREE.BoxBufferGeometry(104, 201, 500);
   var mat = new THREE.MeshPhongMaterial({
-    color: 0x7e3537,
+    color: 0x440255,
     specular: 0x111111,
     shininess: 10
   });
@@ -348,7 +348,7 @@ function initModels() {
 
   // Wall material
   var mat = new THREE.MeshLambertMaterial({
-    color: 0xc1c1c1,
+    color: 0x440255,
     wireframe: false,
     transparent: true,
     opacity: 0
@@ -379,7 +379,7 @@ function initModels() {
   // Pusher
   var geo = new THREE.BoxBufferGeometry(103, 28, 160);
   var mat = new THREE.MeshPhongMaterial({
-    color: 0xc70000,
+    color: 0x6c026e,
     specular: 0x111111,
     shininess: 10
   });

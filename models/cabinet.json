@@ -13435,7 +13435,7 @@
     },
     {
       "specularCoef": 50,
-      "colorSpecular": [0.5, 0.5, 0.5],
+      "colorSpecular": [0.2, 0.2, 0.2],
       "opacity": 1,
       "DbgIndex": 0,
       "visible": true,
@@ -13445,7 +13445,7 @@
       "depthTest": true,
       "DbgName": "Base",
       "blending": "NormalBlending",
-      "colorDiffuse": [0.64, 0.00615115, 0.0325821],
+      "colorDiffuse": [0.6, 0.1, 0.9],
       "DbgColor": 15658734,
       "transparent": false,
       "depthWrite": true
@@ -13479,7 +13479,7 @@
       "depthTest": true,
       "DbgName": "Gold",
       "blending": "NormalBlending",
-      "colorDiffuse": [0.8, 0.488183, 0.124815],
+      "colorDiffuse": [0.6, 0.1, 0.9],
       "DbgColor": 60928,
       "transparent": false,
       "depthWrite": true
@@ -13498,7 +13498,7 @@
       "DbgName": "Decal",
       "mapDiffuse": "decal.jpg",
       "blending": "NormalBlending",
-      "colorDiffuse": [0.64, 0.64, 0.64],
+      "colorDiffuse": [0.6, 0.1, 0.9],
       "mapDiffuseRepeat": [1, 1],
       "mapDiffuseAnisotropy": 1,
       "DbgColor": 15658496,
