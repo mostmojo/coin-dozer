@@ -53,14 +53,10 @@ body {
 
 .welcome {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #fff;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
-  border-radius: 4px;
-  text-align: center;
-  padding: 2rem 15%;
+  background-image: url("../textures/Desktop.png");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
   min-height: 100vh;
   min-width: 100vw;
   display: block;
@@ -68,14 +64,21 @@ body {
   z-index: 600;
 }
 
+.welcome-box {
+  text-align: center;
+  width: 37.5rem;
+  margin: 36rem auto 0;
+}
+
 .welcome-title,
 .welcome-subtitle {
-  color: black;
   font-family: "Fredoka One", cursive;
+  color: #ffe270;
+  text-shadow: 1px 4px black;
 }
 
 .welcome-title {
-  font-size: 34px;
+  font-size: 64px;
   font-weight: bold;
 }
 
@@ -88,9 +91,9 @@ body {
   padding: 8px 24px;
   border-radius: 4px;
   font-weight: bold;
-  background: linear-gradient(#93080e, #72080d);
+  background: linear-gradient(#e9161a, #ff878c);
   transition: background 0.3s ease;
-  border: 1px solid #72080d;
+  border: 1px solid #e9161a;
   font-family: "Open Sans", sans-serif;
   cursor: pointer;
 }
@@ -109,7 +112,7 @@ a:hover {
 }
 
 .welcome-button:hover {
-  background: linear-gradient(#89070e, #68080c);
+  background: linear-gradient(#c41417, #df767a);
 }
 
 .mb {
