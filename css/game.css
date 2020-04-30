@@ -53,7 +53,7 @@ body {
 
 .welcome {
   position: absolute;
-  background-image: url("../textures/Desktop.jpg");
+  background-image: url("../textures/desktop.jpg");
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -67,7 +67,7 @@ body {
 .welcome-box {
   text-align: center;
   width: 37.5rem;
-  margin: 35rem auto 0;
+  margin: 28rem auto 0;
 }
 
 .welcome-title,
@@ -266,6 +266,25 @@ a:hover {
   box-shadow: 0 0 px rgba(0, 0, 0, 0.6);
   position: absolute;
   left: 50%;
+}
+
+#myProgresso {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #000;
+  border: 2px solid #000;
+  border-radius: 4px;
+  height: 14px;
+}
+
+#myBaro {
+  width: 1%;
+  height: 9px;
+  background-image: linear-gradient(to bottom, #f9dd76, #dd952b);
+  padding-left: 2px;
+  padding-top: 2px;
+  font-size: 12px;
+  border-radius: 12px;
 }
 
 #myProgress2 {

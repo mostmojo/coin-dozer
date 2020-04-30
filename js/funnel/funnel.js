@@ -15,36 +15,57 @@ const blurry = document.querySelector(".blurry");
 const close = document.getElementById("notification-close");
 const notifs = document.querySelector(".notification");
 
-// Function to hide WELCOME module and remove blur, on click with transition effect
-playGameCTA.addEventListener(
-  "click",
-  function () {
-    if (welcomeBanner.classList.contains("hidden")) {
-      welcomeBanner.classList.remove("hidden");
-      setTimeout(function () {
-        welcomeBanner.classList.remove("visuallyhidden");
-      }, 20);
+// Function to trigger the loading bar on the WELCOME popup. It will start game once it reaches 100%
+
+function loadingBarMove() {
+  var elem = document.getElementById("myBaro");
+  var percent = document.getElementById("percent");
+  var width = 1;
+  var id = setInterval(frame, 120);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+      hideWelcomeStartGame();
     } else {
-      welcomeBanner.classList.add("visuallyhidden");
-      welcomeBanner.addEventListener(
-        "transitionend",
-        function (e) {
-          welcomeBanner.classList.add("hidden");
-          blurry.classList.remove("blurry");
-          setTimeout(function () {
-            notifs.classList.remove("visuallyhidden");
-          }, 2000);
-        },
-        {
-          capture: false,
-          once: true,
-          passive: false
-        }
-      );
+      width++;
+      elem.style.width = width + "%";
+      percent.innerHTML = width + "%";
     }
-  },
-  false
-);
+    /*
+    if (width >= 25) {
+      $("#check1").fadeIn();
+    }
+    */
+  }
+}
+loadingBarMove();
+
+// Function to hide WELCOME module and remove blur, on click with transition effect
+function hideWelcomeStartGame() {
+  if (welcomeBanner.classList.contains("hidden")) {
+    welcomeBanner.classList.remove("hidden");
+    setTimeout(function () {
+      welcomeBanner.classList.remove("visuallyhidden");
+    }, 20);
+  } else {
+    welcomeBanner.classList.add("visuallyhidden");
+    welcomeBanner.addEventListener(
+      "transitionend",
+      function (e) {
+        welcomeBanner.classList.add("hidden");
+        blurry.classList.remove("blurry");
+        setTimeout(function () {
+          notifs.classList.remove("visuallyhidden");
+        }, 2000);
+      },
+      {
+        capture: false,
+        once: true,
+        passive: false
+      }
+    );
+  }
+}
 
 // Function to detect number of clicks and show/hide the LEVEL 1,2,3 & people-playing popups accordingly
 var clickCounter = 0;
