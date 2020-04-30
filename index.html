@@ -56,21 +56,27 @@
         <!-- <h2 class="welcome-title">WELCOME!</h2> -->
         <div class="welcome-box">
           <p class="welcome-subtitle mb">
-            Enjoy the thrill of the original Coin Dozer game and turn your coins into real money.
+            Turn your coins into real money!
             <br />
-            <br />
-            Just tap anywhere on the screen and watch the coins tumbling down. Reach the top level to win 100 free
-            chances to hit the Jackpot + $475 welcome bonus.
+            Tap anywhere on the screen & watch your coins tumbling down.
           </p>
+          <p class="welcome-subtitle-alt">
+            Reach the top level to win 100 free chances to hit the Jackpot + $475 welcome bonus.
+          </p>
+          <button class="welcome-button" id="playGameCTA" type="submit">PLAY GAME</button>
         </div>
-        <button class="welcome-button" id="playGameCTA" type="submit">PLAY GAME</button>
       </section>
 
       <!-- Progress  bar -->
-      <div class="jumbotron">
-        <p>Your progress</p>
-        <div class="progress">
-          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+      <div class="jumbotron-container">
+        <div class="jumbotron">
+          <p>TOP LEVEL</p>
+          <div class="star">
+            <img src="textures/star.png" />
+          </div>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
         </div>
       </div>
 
@@ -139,9 +145,9 @@
         <p>Level 3. Congrats! Top level! 🎉</p>
         <p>Calculating your prize...</p>
         <!-- Loading bar -->
-        <div id="loadingPanel" style="display: none;">
-          <div id="myProgress">
-            <div id="myBar"></div>
+        <div id="loadingPanel2" style="display: none;">
+          <div id="myProgress2">
+            <div id="myBar2"></div>
           </div>
         </div>
       </div>

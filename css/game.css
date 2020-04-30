@@ -53,7 +53,7 @@ body {
 
 .welcome {
   position: absolute;
-  background-image: url("../textures/Desktop.png");
+  background-image: url("../textures/Desktop.jpg");
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -67,13 +67,14 @@ body {
 .welcome-box {
   text-align: center;
   width: 37.5rem;
-  margin: 36rem auto 0;
+  margin: 35rem auto 0;
 }
 
 .welcome-title,
-.welcome-subtitle {
+.welcome-subtitle,
+.welcome-subtitle-alt {
   font-family: "Fredoka One", cursive;
-  color: #ffe270;
+  color: #fff;
   text-shadow: 1px 4px black;
 }
 
@@ -83,19 +84,29 @@ body {
 }
 
 .welcome-subtitle {
-  font-size: 24px;
+  font-size: 20px;
+}
+
+.welcome-subtitle-alt {
+  color: #380550;
+  font-size: 22px;
+  background: linear-gradient(to bottom, #f9dd76, #dd952b);
+  text-shadow: none;
+  padding: 1rem 4rem;
+  border-radius: 24px;
 }
 
 .welcome-button {
   color: white;
-  padding: 8px 24px;
+  padding: 16px 48px;
   border-radius: 4px;
   font-weight: bold;
   background: linear-gradient(#e9161a, #ff878c);
   transition: background 0.3s ease;
   border: 1px solid #e9161a;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Fredoka One", cursive;
   cursor: pointer;
+  font-size: 24px;
 }
 
 #claimPrizeCTA {
@@ -119,18 +130,26 @@ a:hover {
   margin-bottom: 1rem;
 }
 
+.jumbotron-container {
+  position: relative;
+  width: 100%;
+  min-height: 7vh;
+  background: linear-gradient(to bottom, #38014e, #6c026e, #440255);
+}
+
 .jumbotron {
   height: 12px;
-  position: absolute;
-  right: 10px;
-  top: 36px;
-  width: 120px;
+  text-align: center;
+  width: 300px;
   border-radius: 4px;
-  margin: -20px 0 0 -100px;
+  margin: -5px auto;
+  padding-top: 8px;
 }
 
 .jumbotron p {
   margin: 4px 0;
+  font-weight: bold;
+  font-family: "Fredoka One", sans-serif;
 }
 
 .progress {
@@ -138,7 +157,7 @@ a:hover {
   height: 1rem;
   overflow: hidden;
   font-size: 0.75rem;
-  background-color: #e9ecef;
+  background-color: black;
   border-radius: 0.25rem;
 }
 
@@ -147,11 +166,21 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
-  color: #fff;
+  color: #000;
   text-align: center;
+  height: 0.8rem;
   white-space: nowrap;
-  background: linear-gradient(to right, #b71921, #f06d06);
+  background: linear-gradient(to right, #cbfff3, #0fffc5);
   transition: width 0.6s ease;
+  border-radius: 4px;
+  margin: 1px 0px;
+}
+
+.star img {
+  height: 3rem;
+  position: absolute;
+  top: 12px;
+  right: 40%;
 }
 
 @keyframes load {
@@ -222,7 +251,7 @@ a:hover {
   font-weight: bold;
 }
 
-#myProgress {
+#myProgress2 {
   width: 80%;
   margin: 0 auto;
   background-color: #ddd;
@@ -230,11 +259,11 @@ a:hover {
   border-radius: 3px;
 }
 
-#loadingPanel {
+#loadingPanel2 {
   margin-bottom: 15px;
 }
 
-#myBar {
+#myBar2 {
   width: 1%;
   height: 20px;
   background: linear-gradient(to right, #b71921, #f06d06);
@@ -360,6 +389,9 @@ a:hover {
 
   .jumbotron {
     top: 27px;
-    width: 77px;
+  }
+
+  .star img {
+    right: 10px;
   }
 }

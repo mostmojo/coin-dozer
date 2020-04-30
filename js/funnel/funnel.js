@@ -8,7 +8,7 @@ const levelOne = document.getElementById("levelOne");
 const levelTwo = document.getElementById("levelTwo");
 const levelThree = document.getElementById("levelThree");
 const peoplePlay = document.getElementById("peoplePlaying");
-const loadingPanel = document.getElementById("loadingPanel");
+const loadingPanel = document.getElementById("loadingPanel2");
 const congratsClaimPrize = document.getElementById("congratsClaimPrize");
 const blurry = document.querySelector(".blurry");
 const close = document.getElementById("notification-close");
@@ -79,7 +79,7 @@ window.addEventListener("click", function () {
 
 // Function to trigger the moving of the loading bar
 function loadingBarMove() {
-  var elem = document.getElementById("myBar");
+  var elem = document.getElementById("myBar2");
   var width = 1;
   var id = setInterval(frame, 100);
   function frame() {
