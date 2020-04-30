@@ -164,6 +164,8 @@ a:hover {
 .progress-bar {
   display: flex;
   flex-direction: column;
+  font-family: "Fredoka One", sans-serif;
+  font-weight: lighter;
   justify-content: center;
   overflow: hidden;
   color: #000;
@@ -235,20 +237,35 @@ a:hover {
 }
 
 .people-playing {
-  background: linear-gradient(#8f6b29, #fde08d, #df9f28);
-  border: #8f6b29 2px solid;
-  padding: 1px;
-  border-radius: 2px;
-  text-align: center;
-  width: 15rem;
+  background: yellow;
+  padding: 8px 12px;
+  text-align: left;
+  width: 14rem;
+  text-transform: uppercase;
+  border-radius: 0px 12px 12px 0px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
-  margin: 1rem auto;
+  position: absolute;
+  top: 300px;
 }
 
-.people-playing p {
-  font-family: "Open Sans", sans-serif;
+.people-playing p,
+.nearly-there p {
+  font-family: "Fredoka One", cursive;
+  font-size: 18px;
   color: black;
   font-weight: bold;
+}
+
+.nearly-there {
+  background: yellow;
+  padding: 8px 12px;
+  text-align: center;
+  width: 11rem;
+  text-transform: uppercase;
+  border-radius: 0px 0px 12px 12px;
+  box-shadow: 0 0 px rgba(0, 0, 0, 0.6);
+  position: absolute;
+  left: 50%;
 }
 
 #myProgress2 {
@@ -270,27 +287,23 @@ a:hover {
 }
 
 .prize-banner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #fff;
+  background: #000;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
   border-radius: 4px;
   text-align: center;
   padding: 2rem 1.2rem;
-  height: auto;
-  width: 20rem;
+  min-height: 100vh;
+  min-width: 100vw;
   display: block;
   transition: all 1s linear;
   z-index: 700;
 }
 
 #countdown {
-  font-size: 0.8rem;
-  color: #93080e;
+  font-size: 1.2rem;
+  color: #e9161a;
   border-radius: 4px;
-  width: 64%;
+  width: 22%;
   height: 10%;
   text-align: center;
   margin: 8px auto;
@@ -299,8 +312,9 @@ a:hover {
   align-items: center;
   justify-content: center;
   transition: background 0.3s ease;
-  border: 1px solid #72080d;
+  border: 1px solid #e9161a;
   padding: 0.2rem 4rem;
+  font-family: "Fredoka One", cursive;
 }
 
 .confetti {

@@ -8,6 +8,7 @@ const levelOne = document.getElementById("levelOne");
 const levelTwo = document.getElementById("levelTwo");
 const levelThree = document.getElementById("levelThree");
 const peoplePlay = document.getElementById("peoplePlaying");
+const nearlyThere = document.getElementById("nearlyThere");
 const loadingPanel = document.getElementById("loadingPanel2");
 const congratsClaimPrize = document.getElementById("congratsClaimPrize");
 const blurry = document.querySelector(".blurry");
@@ -51,10 +52,10 @@ window.addEventListener("click", function () {
   clickCounter++;
   if (clickCounter == 33) {
     // Show Level 1 popup
-    levelOne.style.display = "block";
+    // levelOne.style.display = "block";
   } else if (clickCounter == 41) {
     // Hide Level 1 popup
-    levelOne.style.display = "none";
+    // levelOne.style.display = "none";
   } else if (clickCounter == 12) {
     // Show peoplePlaying popup
     peoplePlaying.style.display = "block";
@@ -62,23 +63,23 @@ window.addEventListener("click", function () {
     // Hide peoplePlaying popup
     peoplePlaying.style.display = "none";
   } else if (clickCounter == 66) {
-    // Show Level 2 popup
-    levelTwo.style.display = "block";
+    // Show Nearly There popup
+    nearlyThere.style.display = "block";
   } else if (clickCounter == 74) {
-    // Hide Level 2 popup
-    levelTwo.style.display = "none";
+    // Hide Nearly There popup
+    nearlyThere.style.display = "none";
   } else if (clickCounter == 100) {
     // Show Level 3 popup & loading bar & chat bot
     levelThree.style.display = "block";
     levelThree.classList.add("confetti");
     loadingPanel.style.display = "block";
-    loadingBarMove();
+    loadingBarMove2();
     // showChatBot();
   }
 });
 
 // Function to trigger the moving of the loading bar
-function loadingBarMove() {
+function loadingBarMove2() {
   var elem = document.getElementById("myBar2");
   var width = 1;
   var id = setInterval(frame, 100);
@@ -104,6 +105,7 @@ function showCongratsClaimPrize() {
   levelThree.style.display = "none";
   loadingPanel.style.display = "none";
   congratsClaimPrize.style.display = "block";
+  congratsClaimPrize.classList.add("confetti");
   timerStart();
   // chatBox.classList.remove('position-center');
 }
