@@ -233,7 +233,7 @@ function initScene() {
   loader.setTexturePath("textures/");
 
   // Panorama background
-  initPanorama("/textures/arcade.jpg");
+  initPanorama("textures/arcade.jpg");
 
   // Initialize
   initModels();

@@ -13496,7 +13496,7 @@
       "depthTest": true,
       "mapDiffuseWrap": ["repeat", "repeat"],
       "DbgName": "Decal",
-      "mapDiffuse": "decal.jpg",
+      "mapDiffuse": "../textures/decal.jpg",
       "blending": "NormalBlending",
       "colorDiffuse": [0.6, 0.1, 0.9],
       "mapDiffuseRepeat": [1, 1],

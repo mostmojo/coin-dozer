@@ -42,6 +42,14 @@ body {
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
+.welcome-logo {
+  text-align: center;
+  margin-top: 2rem;
+}
+.welcome-logo img {
+  height: 7rem;
+}
+
 .money-badge {
   float: left;
   margin: 1rem;
@@ -67,7 +75,7 @@ body {
 .welcome-box {
   text-align: center;
   width: 37.5rem;
-  margin: 37.4rem auto 0;
+  margin: 30.4rem auto 0;
 }
 
 .welcome-title,
@@ -442,7 +450,7 @@ a:hover {
   .welcome-box {
     text-align: center;
     width: 21.5rem;
-    margin: 22.4rem auto 0;
+    margin: 16.4rem auto 0;
   }
 
   .people-playing {
@@ -505,5 +513,13 @@ a:hover {
 
   .prize-banner {
     padding: 4rem 1.2rem;
+  }
+
+  .welcome-logo {
+    margin-top: 1rem;
+  }
+
+  .welcome-logo img {
+    height: 5rem;
   }
 }
