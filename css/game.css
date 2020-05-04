@@ -270,10 +270,9 @@ a:hover {
   background: yellow;
   padding: 8px 12px;
   text-align: center;
-  width: 11rem;
   text-transform: uppercase;
   border-radius: 0px 0px 12px 12px;
-  box-shadow: 0 0 px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
   position: absolute;
   left: 50%;
 }
