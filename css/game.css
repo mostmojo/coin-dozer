@@ -87,7 +87,7 @@ body {
 }
 
 .welcome-subtitle {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 .welcome-subtitle-alt {
@@ -134,6 +134,16 @@ a:hover {
 
 .mt {
   margin-top: 1rem;
+  width: 100%;
+  background: #2f0048;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0.5rem 0;
+}
+
+.mt img {
+  height: 4rem;
 }
 
 .jumbotron-container {
@@ -487,10 +497,6 @@ a:hover {
 
   .welcome-button {
     padding: 8px 16px;
-  }
-
-  .mt img {
-    height: 4rem;
   }
 
   .prize-banner {
