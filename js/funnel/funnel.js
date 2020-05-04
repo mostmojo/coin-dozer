@@ -103,7 +103,7 @@ window.addEventListener("click", function () {
 function loadingBarMove2() {
   var elem = document.getElementById("myBar2");
   var width = 1;
-  var id = setInterval(frame, 100);
+  var id = setInterval(frame, 40);
   function frame() {
     if (width >= 100) {
       showCongratsClaimPrize();
