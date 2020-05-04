@@ -107,8 +107,8 @@ body {
   background: linear-gradient(to bottom, #f9dd76, #dd952b);
   transition: background 0.3s ease;
   font-family: "Fredoka One", cursive;
-  cursor: pointer;
   font-size: 24px;
+  margin: 0.5rem 0;
 }
 
 #claimPrizeCTA {
@@ -290,6 +290,10 @@ a:hover {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
   position: absolute;
   left: 50%;
+}
+
+.congrats-content img {
+  height: 10rem;
 }
 
 #myProgresso {

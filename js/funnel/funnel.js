@@ -8,6 +8,7 @@ const levelOne = document.getElementById("levelOne");
 const levelTwo = document.getElementById("levelTwo");
 const levelThree = document.getElementById("levelThree");
 const peoplePlay = document.getElementById("peoplePlaying");
+const playingPopup = document.getElementById("playingPopup");
 const nearlyThere = document.getElementById("nearlyThere");
 const loadingPanel = document.getElementById("loadingPanel2");
 const congratsClaimPrize = document.getElementById("congratsClaimPrize");
@@ -81,6 +82,10 @@ window.addEventListener("click", function () {
   } else if (clickCounter == 20) {
     // Hide peoplePlaying popup
     peoplePlaying.style.display = "none";
+  } else if (clickCounter == 31) {
+    playingPopup.style.display = "block";
+  } else if (clickCounter == 37) {
+    playingPopup.style.display = "none";
   } else if (clickCounter == 74) {
     // Show Nearly There popup
     nearlyThere.style.display = "block";
