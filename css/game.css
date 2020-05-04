@@ -67,7 +67,7 @@ body {
 .welcome-box {
   text-align: center;
   width: 37.5rem;
-  margin: 31.4rem auto 0;
+  margin: 37.4rem auto 0;
 }
 
 .welcome-title,
@@ -460,5 +460,14 @@ a:hover {
 
   .welcome-title {
     font-size: 2rem;
+  }
+
+  .notification {
+    width: 100vw;
+    margin: 25% auto;
+  }
+
+  .notification-badge {
+    height: 6rem;
   }
 }
