@@ -83,10 +83,10 @@ window.addEventListener("click", function () {
   } else if (clickCounter == 20) {
     // Hide peoplePlaying popup
     peoplePlaying.style.display = "none";
-  } else if (clickCounter == 66) {
+  } else if (clickCounter == 74) {
     // Show Nearly There popup
     nearlyThere.style.display = "block";
-  } else if (clickCounter == 74) {
+  } else if (clickCounter == 80) {
     // Hide Nearly There popup
     nearlyThere.style.display = "none";
   } else if (clickCounter == 100) {

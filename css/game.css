@@ -417,6 +417,17 @@ a:hover {
 /* Media Queries */
 
 @media only screen and (max-width: 414px) {
+  .welcome {
+    position: absolute;
+    background-image: url("../textures/desktop-mobile.jpg");
+  }
+
+  .welcome-box {
+    text-align: center;
+    width: 21.5rem;
+    margin: 22.4rem auto 0;
+  }
+
   #coin-slot {
     top: 58px;
     right: 10px;
@@ -426,11 +437,35 @@ a:hover {
     height: 5.5rem;
   }
 
-  .welcome {
-    width: 19rem;
+  .people-playing {
+    width: 7rem;
+    top: 140px;
   }
 
-  .people-playing {
-    padding: 5px 10px;
+  .people-playing p {
+    font-size: 14px;
+  }
+
+  .money-badge img {
+    height: 4rem;
+  }
+
+  .nearly-there {
+    padding: 2px 4px;
+    left: 0;
+  }
+
+  .nearly-there p {
+    font-size: 14px;
+  }
+
+  .level {
+    background-size: contain;
+    margin: 8rem auto;
+  }
+
+  .level-p {
+    font-size: 18px;
+    padding-top: 5rem;
   }
 }
