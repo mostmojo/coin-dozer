@@ -54,9 +54,7 @@ function hideWelcomeStartGame() {
       function (e) {
         welcomeBanner.classList.add("hidden");
         blurry.classList.remove("blurry");
-        setTimeout(function () {
-          notifs.classList.remove("visuallyhidden");
-        }, 2000);
+        notifs.classList.remove("visuallyhidden");
       },
       {
         capture: false,

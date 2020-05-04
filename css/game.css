@@ -80,7 +80,7 @@ body {
 }
 
 .welcome-title {
-  font-size: 64px;
+  font-size: 4rem;
   font-weight: bold;
   color: #faff00;
 }
@@ -369,19 +369,17 @@ a:hover {
 }
 
 .notification {
-  display: flex;
-  align-items: center;
-  background: white;
-  padding: 8px 12px;
-  border: 1px solid rgb(166, 166, 166);
-  width: auto;
-  position: absolute;
-  bottom: 0;
+  margin: 4rem auto;
+  background-image: url("../textures/notification.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 40vw;
 }
 
-.notification .notification-content {
-  flex-grow: 1;
-  padding: 0 24px;
+.notification-badge {
+  height: 8rem;
+  float: left;
 }
 
 .notification p {
@@ -428,22 +426,13 @@ a:hover {
     margin: 22.4rem auto 0;
   }
 
-  #coin-slot {
-    top: 58px;
-    right: 10px;
-  }
-
-  #coin-slot img {
-    height: 5.5rem;
-  }
-
   .people-playing {
     width: 7rem;
     top: 140px;
   }
 
   .people-playing p {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 
   .money-badge img {
@@ -456,7 +445,7 @@ a:hover {
   }
 
   .nearly-there p {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 
   .level {
@@ -465,7 +454,11 @@ a:hover {
   }
 
   .level-p {
-    font-size: 18px;
+    font-size: 1.125rem;
     padding-top: 5rem;
+  }
+
+  .welcome-title {
+    font-size: 2rem;
   }
 }

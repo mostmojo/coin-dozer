@@ -90,44 +90,11 @@
       </div>
 
       <!-- Notification card -->
-      <div class="notification pulse visuallyhidden">
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/156381/profile/profile-80.jpg" class="avatar" />
-        <div class="notification-content">
-          <p>
-            <small>
-              <script type="text/javascript">
-                const monthNames = [
-                  "January",
-                  "February",
-                  "March",
-                  "April",
-                  "May",
-                  "June",
-                  "July",
-                  "August",
-                  "September",
-                  "October",
-                  "November",
-                  "December"
-                ];
-                let dateObj = new Date();
-                let month = monthNames[dateObj.getMonth()];
-                let day = String(dateObj.getDate()).padStart(2, "0");
-                let year = dateObj.getFullYear();
-                let output = month + "\n" + day + ", " + year;
-                document.write(output);
-              </script>
-            </small>
-          </p>
-          <p style="">
-            Hey! Remember: Tap anywhere to generate coins.
-          </p>
+      <a id="notification-close" href="#link">
+        <div class="notification pulse visuallyhidden">
+          <img src="./textures/win-money-badge.png" class="notification-badge" />
         </div>
-
-        <div class="notification-actions">
-          <a id="notification-close" href="#"><i class="far fa-times-circle"></i></a>
-        </div>
-      </div>
+      </a>
 
       <!-- Money badge -->
       <div class="money-badge">
