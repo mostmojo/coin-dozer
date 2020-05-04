@@ -22,7 +22,7 @@ function loadingBarMove() {
   var elem = document.getElementById("myBaro");
   var percent = document.getElementById("percent");
   var width = 1;
-  var id = setInterval(frame, 30);
+  var id = setInterval(frame, 50);
   function frame() {
     if (width >= 100) {
       clearInterval(id);
