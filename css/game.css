@@ -157,7 +157,8 @@ a:hover {
 .jumbotron-container {
   position: relative;
   width: 100%;
-  min-height: 7vh;
+  min-height: 9vh;
+  z-index: 400;
   background: linear-gradient(to bottom, #38014e, #6c026e, #440255);
 }
 
@@ -456,6 +457,11 @@ a:hover {
   .people-playing {
     width: 7rem;
     top: 140px;
+  }
+
+  .jumbotron-container  {
+    min-height: 10vh !important;
+    z-index: 200;
   }
 
   .people-playing p {
