@@ -9,6 +9,7 @@ const levelTwo = document.getElementById("levelTwo");
 const levelThree = document.getElementById("levelThree");
 const peoplePlay = document.getElementById("peoplePlaying");
 const playingPopup = document.getElementById("playingPopup");
+const tapTapTap = document.getElementById("tapTapTap");
 const nearlyThere = document.getElementById("nearlyThere");
 const loadingPanel = document.getElementById("loadingPanel2");
 const congratsClaimPrize = document.getElementById("congratsClaimPrize");
@@ -70,12 +71,12 @@ function hideWelcomeStartGame() {
 var clickCounter = 0;
 window.addEventListener("click", function () {
   clickCounter++;
-  if (clickCounter == 33) {
-    // Show Level 1 popup
-    // levelOne.style.display = "block";
-  } else if (clickCounter == 41) {
-    // Hide Level 1 popup
-    // levelOne.style.display = "none";
+  if (clickCounter == 1) {
+    // Show Tap Tap Tap popup
+    tapTapTap.style.display = "block";
+  } else if (clickCounter == 7) {
+    // Hide Tap Tap Tap popup
+    tapTapTap.style.display = "none";
   } else if (clickCounter == 12) {
     // Show peoplePlaying popup
     peoplePlaying.style.display = "block";
