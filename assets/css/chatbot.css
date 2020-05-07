@@ -4,15 +4,23 @@ Body
 *,
 *::before,
 *::after {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
   outline: none;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-  -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none;
+	user-select: none;
+	-webkit-touch-action: manipulation;
+	touch-action: manipulation;
+	-webkit-touch-callout: none;
+	!* iOS Safari *! -webkit-user-select: none;
+	!* Safari *! -khtml-user-select: none;
+	!* Konqueror HTML *! -moz-user-select: none;
+	!* Firefox *! -ms-user-select: none;
+	!* Internet Explorer/Edge *! user-select: none;
 }
 
 html,
@@ -21,6 +29,7 @@ body {
 }
 
 body {
+  background: -o-linear-gradient(315deg, #044f48, #2a7561);
   background: linear-gradient(135deg, #044f48, #2a7561);
   background-size: cover;
   font-family: "Fredoka One", cursive;
@@ -37,27 +46,34 @@ Chat
   top: 9999%;
   left: 9999%;
   -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   width: 300px;
   height: 80vh;
   max-height: 200px;
   z-index: 2;
   overflow: hidden;
+  -webkit-box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
   background: rgba(0, 0, 0, 0.85);
   border-radius: 20px;
   display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
 .position-center {
   top: 50%;
   left: 50%;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
@@ -66,6 +82,7 @@ Chat Title
 --------------------*/
 .chat-title {
   -webkit-box-flex: 0;
+  -ms-flex: 0 1 45px;
   flex: 0 1 45px;
   position: relative;
   z-index: 2;
@@ -104,6 +121,8 @@ Chat Title
 }
 
 .chat-title button:hover {
+  -webkit-transform: translateY(2px);
+  -ms-transform: translateY(2px);
   transform: translateY(2px);
 }
 
@@ -130,6 +149,7 @@ Messages
 --------------------*/
 .messages {
   -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   color: rgba(255, 255, 255, 0.5);
   overflow: hidden;
@@ -191,6 +211,7 @@ Messages
   float: right;
   color: #fff;
   text-align: right;
+  background: -o-linear-gradient(330deg, #248a52, #257287);
   background: linear-gradient(120deg, #248a52, #257287);
   border-radius: 10px 10px 0 10px;
 }
@@ -207,8 +228,10 @@ Messages
 }
 .messages .message.new {
   -webkit-transform: scale(0);
+  -ms-transform: scale(0);
   transform: scale(0);
   -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
   transform-origin: 0 0;
   -webkit-animation: bounce 500ms linear both;
   animation: bounce 500ms linear both;
@@ -218,6 +241,7 @@ Messages
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   content: "";
   display: block;
@@ -245,6 +269,7 @@ Messages
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   content: "";
   display: block;
@@ -263,6 +288,7 @@ Messages
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   content: "";
   display: block;
@@ -284,6 +310,7 @@ Message Box
 --------------------*/
 .message-box {
   -webkit-box-flex: 0;
+  -ms-flex: 0 1 40px;
   flex: 0 1 40px;
   width: 100%;
   background: rgba(0, 0, 0, 0.3);
@@ -320,6 +347,7 @@ Message Box
   border-radius: 10px;
   outline: none !important;
   -webkit-transition: background 0.2s ease;
+  -o-transition: background 0.2s ease;
   transition: background 0.2s ease;
 }
 .message-box .message-submit:hover {

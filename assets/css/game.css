@@ -1,7 +1,15 @@
 body {
   margin: 0px;
   overflow: hidden;
-  font-family: "Fredoka One", cursive;
+	font-family: "Fredoka One", cursive;
+	-webkit-touch-action: manipulation;
+	touch-action: manipulation;
+	-webkit-touch-callout: none;
+	!* iOS Safari *! -webkit-user-select: none;
+	!* Safari *! -khtml-user-select: none;
+	!* Konqueror HTML *! -moz-user-select: none;
+	!* Firefox *! -ms-user-select: none;
+	!* Internet Explorer/Edge *! user-select: none;
 }
 
 #overlay {
@@ -19,10 +27,19 @@ body {
 
 #loader {
   background: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -39,6 +56,7 @@ body {
 }
 
 #coin-slot img {
+  -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
@@ -68,6 +86,8 @@ body {
   min-height: 100vh;
   min-width: 100vw;
   display: block;
+  -webkit-transition: all 1s linear;
+  -o-transition: all 1s linear;
   transition: all 1s linear;
   z-index: 600;
 }
@@ -101,6 +121,8 @@ body {
 .welcome-subtitle-alt {
   color: #380550;
   font-size: 22px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f9dd76), to(#dd952b));
+  background: -o-linear-gradient(top, #f9dd76, #dd952b);
   background: linear-gradient(to bottom, #f9dd76, #dd952b);
   text-shadow: none;
   padding: 1rem 4rem;
@@ -112,7 +134,11 @@ body {
   padding: 16px 48px;
   border-radius: 16px;
   font-weight: bold;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f9dd76), to(#dd952b));
+  background: -o-linear-gradient(top, #f9dd76, #dd952b);
   background: linear-gradient(to bottom, #f9dd76, #dd952b);
+  -webkit-transition: background 0.3s ease;
+  -o-transition: background 0.3s ease;
   transition: background 0.3s ease;
   font-family: "Fredoka One", cursive;
   font-size: 24px;
@@ -133,6 +159,8 @@ a:hover {
 }
 
 .welcome-button:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#d4bc62), to(#bc7d20));
+  background: -o-linear-gradient(top, #d4bc62, #bc7d20);
   background: linear-gradient(to bottom, #d4bc62, #bc7d20);
 }
 
@@ -159,6 +187,8 @@ a:hover {
   width: 100%;
   min-height: 9vh;
   z-index: 400;
+  background: -webkit-gradient(linear, left top, left bottom, from(#38014e), color-stop(#6c026e), to(#440255));
+  background: -o-linear-gradient(top, #38014e, #6c026e, #440255);
   background: linear-gradient(to bottom, #38014e, #6c026e, #440255);
 }
 
@@ -179,6 +209,8 @@ a:hover {
 }
 
 .progress {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 1rem;
   overflow: hidden;
@@ -188,17 +220,28 @@ a:hover {
 }
 
 .progress-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   font-family: "Fredoka One", sans-serif;
   font-weight: lighter;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   overflow: hidden;
   color: #000;
   text-align: center;
   height: 0.8rem;
   white-space: nowrap;
+  background: -webkit-gradient(linear, left top, right top, from(#cbfff3), to(#0fffc5));
+  background: -o-linear-gradient(left, #cbfff3, #0fffc5);
   background: linear-gradient(to right, #cbfff3, #0fffc5);
+  -webkit-transition: width 0.6s ease;
+  -o-transition: width 0.6s ease;
   transition: width 0.6s ease;
   border-radius: 4px;
   margin: 1px 0px;
@@ -211,6 +254,15 @@ a:hover {
   position: absolute;
   top: 13px;
   right: -12px;
+}
+
+@-webkit-keyframes load {
+  0% {
+    width: 2%;
+  }
+  10% {
+    width: 10%;
+  }
 }
 
 @keyframes load {
@@ -237,7 +289,7 @@ a:hover {
   height: 100%;
   margin: 6rem auto;
   background-position: top;
-  background-image: url(../textures/congrats-box.jpg);
+  background-image: url("../textures/congrats-box.jpg");
 }
 
 .level-p {
@@ -253,19 +305,40 @@ a:hover {
 }
 
 .pulse {
+  -webkit-animation: pulse 1.5s infinite ease-in;
   animation: pulse 1.5s infinite ease-in;
 }
 
-@keyframes pulse {
+@-webkit-keyframes pulse {
   0% {
+    -webkit-transform: translateY(-2px);
     transform: translateY(-2px);
   }
 
   50% {
+    -webkit-transform: translateY(-4px);
     transform: translateY(-4px);
   }
 
   100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 }
@@ -277,6 +350,7 @@ a:hover {
   width: 14rem;
   text-transform: uppercase;
   border-radius: 0px 12px 12px 0px;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
   position: absolute;
   top: 300px;
@@ -296,6 +370,7 @@ a:hover {
   text-align: center;
   text-transform: uppercase;
   border-radius: 0px 0px 12px 12px;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
   position: absolute;
   left: 50%;
@@ -317,6 +392,8 @@ a:hover {
 #myBaro {
   width: 1%;
   height: 9px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f9dd76), to(#dd952b));
+  background-image: -o-linear-gradient(top, #f9dd76, #dd952b);
   background-image: linear-gradient(to bottom, #f9dd76, #dd952b);
   padding-left: 2px;
   padding-top: 2px;
@@ -340,6 +417,8 @@ a:hover {
 #myBar2 {
   width: 1%;
   height: 9px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f9dd76), to(#dd952b));
+  background-image: -o-linear-gradient(top, #f9dd76, #dd952b);
   background-image: linear-gradient(to bottom, #f9dd76, #dd952b);
   padding-left: 2px;
   padding-top: 2px;
@@ -349,6 +428,7 @@ a:hover {
 
 .prize-banner {
   background: #440255;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
   border-radius: 4px;
   text-align: center;
@@ -356,6 +436,8 @@ a:hover {
   min-height: 100vh;
   min-width: 100vw;
   display: block;
+  -webkit-transition: all 1s linear;
+  -o-transition: all 1s linear;
   transition: all 1s linear;
   z-index: 700;
 }
@@ -368,10 +450,21 @@ a:hover {
   height: 10%;
   text-align: center;
   margin: 8px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-transition: background 0.3s ease;
+  -o-transition: background 0.3s ease;
   transition: background 0.3s ease;
   border: 1px solid #f9dd76;
   padding: 0.2rem 4rem;
@@ -387,8 +480,13 @@ a:hover {
 .blurry {
   width: 100%;
   pointer-events: none;
+  -webkit-filter: blur(16px);
   filter: blur(16px);
+  -webkit-transition: -webkit-filter 1s ease;
+  transition: -webkit-filter 1s ease;
+  -o-transition: filter 1s ease;
   transition: filter 1s ease;
+  transition: filter 1s ease, -webkit-filter 1s ease;
 }
 
 .avatar {
@@ -423,6 +521,8 @@ a:hover {
 }
 .notification .notification-actions {
   opacity: 0.5;
+  -webkit-transition: ease 0.3s;
+  -o-transition: ease 0.3s;
   transition: ease 0.3s;
 }
 
@@ -459,7 +559,7 @@ a:hover {
     top: 140px;
   }
 
-  .jumbotron-container  {
+  .jumbotron-container {
     min-height: 10vh !important;
     z-index: 200;
   }
@@ -518,7 +618,7 @@ a:hover {
   }
 
   .prize-banner {
-    padding: 4rem 1.2rem;
+    padding: 0.8rem 1.2rem;
   }
 
   .welcome-logo {
