@@ -1,0 +1,27 @@
+Header set Access-Control-Allow-Origin "*"
+Header set Access-Control-Allow-Methods "GET,PUT,POST,DELETE"
+Header set Access-Control-Allow-Headers "Content-Type, Authorization"
+
+# This file provides server security limiting access to the localhost only.
+# Comment next four lines to deactivate. (Allows external access)
+#------------------------------------------------------------------------------
+
+# Order Deny,Allow
+# Deny from all
+# Allow from 127.0.0.1
+# Allow from ::1
+
+# Allow from all
+# Satisfy Any
+
+# Access-Control-Allow-Origin "*"
+# Access-Control-Allow-Headers "origin, x-requested-with, content-type"
+# Access-Control-Allow-Methods "PUT, GET, POST, DELETE, OPTIONS"
+
+
+#------------------------------------------------------------------------------
+# To allow execution of cgi scripts in this directory uncomment next two lines.
+#------------------------------------------------------------------------------.
+
+ # AddHandler cgi-script .bat .exe .pl .cgi .json
+ # Options +ExecCGI +FollowSymLinks

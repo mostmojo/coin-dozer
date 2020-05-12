@@ -137,11 +137,11 @@ function showCongratsClaimPrize() {
 
 /* Function to open designated link in a new tab.
 This is due to the game overlaying the <a href="#.."> links making them not work. There's always a way ;) */
-function openLinkInNewTab() {
-  window.open("https://www.google.com", "_blank");
+function openLink() {
+  window.open("https://www.google.com", "_self");
 }
 
-claimPrizeCTA.addEventListener("click", openLinkInNewTab);
+claimPrizeCTA.addEventListener("click", openLink, firepixel);
 
 // Timer to boot the 2 minute countdown
 function timerBoot(duration, display) {

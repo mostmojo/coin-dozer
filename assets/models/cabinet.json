@@ -13486,7 +13486,7 @@
     },
     {
       "specularCoef": 50,
-      "colorSpecular": [0.5, 0.5, 0.5],
+      "colorSpecular": [0.790598, 0.790598, 0.790598],
       "opacity": 1,
       "DbgIndex": 4,
       "visible": true,

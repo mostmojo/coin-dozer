@@ -230,10 +230,10 @@ function initScene() {
 
   // JSON Loader
   loader = new THREE.JSONLoader();
-  loader.setTexturePath("assets/textures/");
+  loader.setTexturePath("./assets/textures/");
 
   // Panorama background
-  initPanorama("assets/textures/arcade.jpg");
+  initPanorama("./assets/textures/arcade.jpg");
 
   // Initialize
   initModels();
@@ -313,7 +313,7 @@ function initPanorama(imagePath) {
  */
 function initModels() {
   // Cabinet model
-  loader.load("assets/models/cabinet.json", function (geometry, materials) {
+  loader.load("./assets/models/cabinet.json", function (geometry, materials) {
     // Create mesh for model
     var material = new THREE.MultiMaterial(materials);
     cabinet = new THREE.Mesh(geometry, material, 0);
@@ -417,7 +417,7 @@ function initLights() {
 function initAudio() {
   // Arcade ambience
   var arcadeAmb = new THREE.Audio(listener);
-  audioLoader.load("assets/sfx/arcade.mp3", function (buffer) {
+  audioLoader.load("./assets/sfx/arcade.mp3", function (buffer) {
     arcadeAmb.setBuffer(buffer);
     arcadeAmb.setLoop(true);
     arcadeAmb.setVolume(0.5);
@@ -427,13 +427,13 @@ function initAudio() {
   });
 
   // Coin sounds
-  audioLoader.load("assets/sfx/coinClash1.wav", function (buffer) {
+  audioLoader.load("./assets/sfx/coinClash1.wav", function (buffer) {
     coinSFX.push(buffer);
   });
-  audioLoader.load("assets/sfx/coinClash2.wav", function (buffer) {
+  audioLoader.load("./assets/sfx/coinClash2.wav", function (buffer) {
     coinSFX.push(buffer);
   });
-  audioLoader.load("assets/sfx/coinClash3.wav", function (buffer) {
+  audioLoader.load("./assets/sfx/coinClash3.wav", function (buffer) {
     coinSFX.push(buffer);
   });
 }
@@ -448,7 +448,7 @@ function initAudio() {
  * @returns {void}
  */
 function createCoin(posX = 0, posY = 0, posZ = 0) {
-  loader.load("assets/models/coin.json", function (geometry, materials) {
+  loader.load("./assets/models/coin.json", function (geometry, materials) {
     var mass = 1;
     var friction = 0.5;
     var restitution = 0.2;
