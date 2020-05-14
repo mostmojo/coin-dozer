@@ -479,7 +479,8 @@ a:hover {
   transition: background 0.3s ease;
   border: 1px solid #f9dd76;
   padding: 0.2rem 4rem;
-  font-family: "Fredoka One", cursive;
+	font-family: "Fredoka One", cursive;
+	margin-top: 2rem;
 }
 
 .confetti {
